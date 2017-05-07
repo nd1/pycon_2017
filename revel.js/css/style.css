@@ -1,0 +1,32 @@
+.no-bullets {
+  list-style: none;
+}
+.left-align-text {
+  text-align: left;
+}
+
+span.fragment.bold.visible {
+    font-weight: 900;
+}
+.half-page-logo {
+  width: 50%;
+  float: left;
+  margin-top: 2em;
+}
+.reveal section img.no-shadow {
+  box-shadow: none;
+}
+.org-logo {
+  width: 16.666%;
+  float: left;
+  display: inline;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.reveal section img {
+  border: none;
+}
+
+.margin-top {
+  margin-top: 3em;
+}
