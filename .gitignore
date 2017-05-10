@@ -66,3 +66,5 @@ target/
 # API keys
 *config_secret*
 
+# tutorial output files from notebooks/ scripts
+tutorial_output/
