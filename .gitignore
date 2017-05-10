@@ -64,7 +64,7 @@ target/
 .DS_Store
 
 # API keys
-*config_secret*
+config_secret.json
 
 # tutorial output files from notebooks/ scripts
 tutorial_output/
