@@ -66,5 +66,7 @@ target/
 # API keys
 config_secret.json
 
-# tutorial output files from notebooks/ scripts
+# tutorial related files from running  notebooks/ scripts
 tutorial_output/
+api.png
+top10.csv
