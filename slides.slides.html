@@ -67,8 +67,8 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1163,6 +1163,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2591,6 +2592,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3081,6 +3083,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8811,9 +8814,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -9016,14 +9016,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -9046,16 +9040,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9192,9 +9176,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9284,9 +9265,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9331,9 +9309,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9630,7 +9605,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9651,6 +9625,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11321,7 +11300,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11633,7 +11612,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11647,9 +11625,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11710,10 +11685,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11724,11 +11697,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -12075,7 +12046,6 @@ a.anchor-link {
 <p>I am also going to assume people have not tried using APIs.</p>
 <p>I created some notebooks so we can go through some of the python and you can see what it is doing.</p>
 <p>I have also created some scripts you can run when you are ready. Feel free to modify them to suit your needs. Or, if you have some experience with all of this, feel free to play around with those instead of the notebooks.</p>
-<p>If you are new to all of this, including python, I have included some resources at the end of the slides.</p>
 
 </div>
 </div>
@@ -12098,6 +12068,19 @@ a.anchor-link {
 <h2 id="Application-Programming-Interface"><center>Application Programming Interface</center><a class="anchor-link" href="#Application-Programming-Interface">&#182;</a></h2><p>“In the simplest terms, APIs are sets of requirements that govern how one application can talk to another.”</p>
 <p>“APIs are what make it possible to move information between programs....”</p>
 <p><em>Source: <a href="http://readwrite.com/2013/09/19/api-defined">http://readwrite.com/2013/09/19/api-defined</a></em></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>APIs make data collection easier! </li>
+<li>Well, until they don't... limited data, rate limiting, financial charges</li>
+</ul>
 
 </div>
 </div>
@@ -12191,7 +12174,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>RSS stands is defined as an acrony mulitple ways: Rich Site Summary, RDF (Resource Description Framework) Site Summary, Really Simple Syndication. It is an XML based content distribution format commonly used for blog and news data. We can use it to transfer and collect data. Typically, it is used to read blogs and news. RSS retrieval can also be operationalized to create a corpus for analysis.</p>
+<p>RSS is defined as an acrony mulitple ways: Rich Site Summary, RDF (Resource Description Framework) Site Summary, Really Simple Syndication. It is an XML based content distribution format commonly used for blog and news data. We can use it to transfer and collect data. RSS retrieval can also be operationalized to create a corpus for analysis.</p>
 
 </div>
 </div>
@@ -12306,35 +12289,6 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The HTTP request is broken into two parts:</p>
-<ol>
-<li>Headers </li>
-<li>Body </li>
-</ol>
-<p>The <strong>headers</strong> contain meta-information about the request that can change the behavior of the server. Common headers include:</p>
-<ul>
-<li><strong>User-Agent</strong>: the name of the software (browser, OS, system) that is conducting the request </li>
-<li><strong>Authentication</strong>: credentials for secure access to a web resource </li>
-<li><strong>Accept</strong>: the file type of the expected response </li>
-</ul>
-<p>The request header must also identify the <strong>path</strong> of the resource requested (specified in the URL) along with a <strong>method</strong> of interaction. HTTP methods are:</p>
-<ul>
-<li><strong>GET</strong>: retreive a document at the URL, possibly modified by query/parameters </li>
-<li><strong>HEAD</strong>: only return the headers of the response </li>
-<li><strong>POST</strong>: create a new document at the given path whose contents are the data sent in the body </li>
-<li><strong>PUT</strong>: update a document at the given location with the contents sent in the body </li>
-<li><strong>DELETE</strong>: delete the document at the given location</li>
-</ul>
-<p>The <strong>body</strong> contains arbitrary data, but is usually only used in <code>POST</code> and <code>PUT</code> operations.</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="HTTP-Status-Codes">HTTP Status Codes<a class="anchor-link" href="#HTTP-Status-Codes">&#182;</a></h4><ul>
 <li><strong>1xx</strong> - Informational</li>
 <li><strong>2xx</strong> - Success</li>
@@ -12397,7 +12351,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I am not a security expert, but felt like this should at least be mentioned. For the purposes of this tutorial, you will see info in the notebook on creating a json file with the info. If you follow a naming convention for your API key files, you can easily add them to your .gitignore file to avoid inadvertantly uploading them to git.</p>
+<p>For the purposes of this tutorial, you will see info in the notebook on creating a json file with your keys. If you follow a naming convention for your API key files, you can easily add them to your .gitignore file to avoid inadvertantly uploading them to git.</p>
 
 </div>
 </div>
@@ -12479,7 +12433,12 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>summarize/ conclude</p>
+<h1 id="Summary"><center>Summary</center><a class="anchor-link" href="#Summary">&#182;</a></h1><ul>
+<li>APIs provide access to data</li>
+<li>APIs return serialized data</li>
+<li>APIs are everywhere </li>
+<li>RSS is an API</li>
+</ul>
 
 </div>
 </div>
@@ -12628,6 +12587,31 @@ Scraping can turn into a denial of service attack.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="robots.txt"><center>robots.txt</center><a class="anchor-link" href="#robots.txt">&#182;</a></h1><p>The robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize web sites. Not all robots cooperate with the standard; email harvesters, spambots, malware, and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out. The standard is different from, but can be used in conjunction with, Sitemaps, a robot inclusion standard for websites.</p>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard">Wikipedia</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /~joe/</code></p>
+<p><a href="http://www.robotstxt.org/robotstxt.html">About /robots.txt</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="How-do-I-web-scrape?"><center>How do I web scrape?</center><a class="anchor-link" href="#How-do-I-web-scrape?">&#182;</a></h1>
 </div>
 </div>
@@ -12664,7 +12648,12 @@ Scraping can turn into a denial of service attack.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>summarize/ conclude</p>
+<h1 id="Summary"><center>Summary</center><a class="anchor-link" href="#Summary">&#182;</a></h1><ul>
+<li>Web scraping is hard</li>
+<li>Web scraping can have legal and ethical implications</li>
+<li>Try to respect robots.txt</li>
+<li>Web scraping can get you some good data</li>
+</ul>
 
 </div>
 </div>
@@ -12676,15 +12665,6 @@ Scraping can turn into a denial of service attack.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="-Baleen-"><center> <a href="https://github.com/bbengfort/baleen">Baleen</a> </center><a class="anchor-link" href="#-Baleen-">&#182;</a></h2><center><img align="middle" src="./img/space_whale_by_hbitik-d4736q3.jpg" alt="baleen"></center><p><a href="http://hbitik.deviantart.com/art/Space-Whale-253770699">"Space Whale"</a> by <a href="http://hbitik.deviantart.com/">hbitik</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a></p>
 
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Resources"><center>Resources</center><a class="anchor-link" href="#Resources">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
