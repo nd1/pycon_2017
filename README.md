@@ -25,3 +25,15 @@ or
 ```
 $ conda install --yes --file requirements.txt
 ```
+
+### Special Setup
+
+Python 3.6 on OS X does not include a trust store, so SSL connections do not work out of the box. This can be fixed by running:
+
+`/Applications/Python\ 3.6/Install\ Certificates.command`
+
+This installs a default trust store.
+
+References:
+* [StackOverflow](http://stackoverflow.com/questions/27835619/ssl-certificate-verify-failed-error)
+* `/Applications/Python 3.6/ReadMe.rtf`
