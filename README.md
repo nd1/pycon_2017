@@ -26,6 +26,12 @@ or
 $ conda install --yes --file requirements.txt
 ```
 
+## Environment Considerations
+
+All code has been tested in Python 3.5. Some of the notebooks will run in 2.7, but not all. See the setup note below for a note on running the code in Python 3.6.
+
+If you running Windows and do not have extensive expereince with the libraries in the requirements.txt file, I recommend installing [Anaconda](https://www.continuum.io/downloads) and [creating a Python 3.5 environment](https://conda.io/docs/py2or3.html#create-a-python-3-5-environment). 
+
 ### Special Setup
 
 Python 3.6 on OS X does not include a trust store, so SSL connections do not work out of the box. This can be fixed by running:
